@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Music Together</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="headphones.png" />
+</head>
+
+<body>
+    <div>
+        <header>Music Together</header>
+        <div id="login-area">
+            <div style="display: block;">
+                <form id="login-form">
+                    <p id="error-msg"></p>
+                    <input type="text" name="username" placeholder="Введите имя" id="username">
+                    <input type="text" name="room" placeholder="Введите название комнаты" id="room">
+                    <button type="button" id="joinChat">Присоединиться</button>
+                </form>
+            </div>
+        </div>
+        <div id="play-area" style="display: none;">
+            <div id="input-button-and-playlist" class="child-block inline">
+                <form>
+                    <div id="input-url">
+                        <div class="inline"><input type="text" id="videoUrl" placeholder="Введите URL"></div>
+                        <div class="inline"><button id="getInfoBtn" type="button">+</button></div>
+                    </div>
+                </form>
+                <ul id="playlist">
+                </ul>
+            </div>
+            <div id="message-block" class="child-block inline">
+                <div class="top">
+                    <div class="rignt-align">
+                        <div class="room-title inline"></div>
+                        <div class="inline"><img id="clients-numbers" src="clients.png"></div>
+                        <div id="numberClients" class="inline"></div>
+                    </div>
+                </div>
+                <ul id="messages">
+                </ul>
+                <form id="message-form">
+                    <div class="input-group">
+                        <input type="text" placeholder="Сообщение" class="message-el" id="message">
+                    </div>
+                    <div class="input-group">
+                        <button class="message-el" type="button" id="sendMessage">Отправить</button>
+                    </div>
+                </form>
+            </div>
+            <div id="audioConteiner" class="inline child-block">
+                <div id="pre-curr-next">
+                    <div class="height-360">
+                        <div class="center-align padding-right"><button type="button" id="previousSong">&lt;</button>
+                        </div>
+                    </div>
+                    <div class="height-360 width-360"><img id="videoThumbnail" src="white_wheel.png"></div>
+                    <div class="height-360">
+                        <div class="center-align"><button type="button" id="nextSong">&gt;</button></div>
+                    </div>
+                </div>
+                <div id="video-info">
+                    <div id="videoTitle"></div>
+                    <div id="videoAuthor"></div>
+                </div>
+                <audio id="videoAudio" controls>
+                </audio>
+            </div>
+        </div>
+
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

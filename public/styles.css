@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+
+
+input::-webkit-input-placeholder {
+    color: black;
+    font-size: 1.1em;
+}
+
+
+
+
+input::-moz-placeholder {
+    color: black;
+    font-size: 1.1em;
+}
+
+input::placeholder {
+    color: black;
+    font-size: 1.1em;
+}
+
+
+input::-ms-placeholder {
+    color: black;
+    font-size: 1.1em;
+}
+
+#numberClients {
+    font-size: 1.5em;
+}
+
+body {
+    background-color: #ceb0b2;
+    margin: 0;
+    padding: 0;
+}
+
+#videoThumbnail {
+    margin-top: 20px;
+    border-radius: 100%;
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    -webkit-animation-name: rotation;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotation;
+    -moz-animation-duration: 5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -o-animation-name: rotation;
+    -o-animation-duration: 5s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(720deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+#audioConteiner {
+    position: relative;
+    width: 500px;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.message-el {
+    display: inline-block
+}
+
+#input-url {
+    margin-left: 5px;
+}
+
+header {
+    position: relative;
+    margin: 50px 0 25px 0;
+    font-size: 4.3em;
+    text-align: center;
+    letter-spacing: 1px;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    margin: 4px;
+    padding: 0;
+}
+
+#message-block {
+    float: right;
+    width: 20%;
+    margin-right: 3px;
+}
+
+#messages>li:nth-child(odd) {
+    background-color: #c1c2c3;
+}
+
+.playlist-image {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.image-container {
+    display: table-cell;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+#playlist::-webkit-scrollbar {
+    width: 0;
+}
+
+#playlist li {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+#playlist {
+    height: 500px;
+    overflow-y: auto;
+    max-width: 550px;
+    border-radius: 0 50px 50px 0;
+}
+
+.playlistSong {
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+
+.playlistSong:hover {
+    background: rgba(241, 243, 244, .7);
+}
+
+.playlist-title {
+    font-family: 'Lato', sans-serif;
+    display: block;
+    white-space: pre-wrap;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+
+.playlist-author {
+    font-family: 'Lato', sans-serif;
+    margin-top: 4px;
+    margin-left: 7px;
+    display: block;
+    white-space: pre-wrap;
+    font-size: 1em;
+}
+
+.container-info {
+    display: table-cell;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+#messages {
+    border: 1px solid black;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    background-color: #f1f3f4;
+    border-radius: 50px 0 0 50px;
+    padding-bottom: 35px;
+
+}
+
+#messages li {
+    font-size: 1.2em;
+    margin-left: 7px;
+}
+
+#clients-numbers {
+    object-fit: contain;
+    width: 25px;
+}
+
+* {
+    margin: 0;
+}
+
+#getInfoBtn {
+    width: auto;
+    border-radius: 50px;
+}
+
+#videoUrl {
+    border-radius: 0 50px 50px 0;
+}
+
+.height-360 {
+    display: table-cell;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.width {
+    width: 360px;
+}
+
+#pre-curr-next {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.padding-right {
+    padding-right: 15px;
+}
+
+.center-align {
+    margin-top: 180px;
+}
+
+#input-button-and-playlist {
+    margin-left: 3px;
+    float: left;
+    width: auto;
+
+}
+
+#previousSong {
+    font-size: 2em;
+    width: auto;
+    border: none;
+}
+
+#video-info {
+    font-family: 'Lato', sans-serif;
+}
+
+#videoTitle {
+    text-align: center;
+    color: #f1f3f4;
+    font-size: 2em;
+}
+
+audio {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#videoAuthor {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#nextSong {
+    font-size: 2em;
+    width: auto;
+    margin: 0 auto;
+    border: none;
+}
+
+.inline {
+    display: inline-block;
+}
+
+#sendMessage {
+    border-radius: 50px 0 0 50px;
+    width: auto;
+}
+
+
+.room-title {
+    margin-right: 22%;
+    color: #f1f3f4;
+    font-size: 1.6em;
+}
+
+li span {
+    padding: 0;
+    margin-left: 7px;
+    margin-bottom: 3px;
+}
+
+#message {
+    border-radius: 50px 0 0 50px;
+    width: 90%;
+}
+
+.input-group {
+    text-align: right;
+    margin-top: 5px;
+}
+
+.top {
+    font-family: 'Lato', sans-serif;
+}
+
+#play-area {
+    width: 100%;
+    position: relative;
+}
+
+.rignt-align {
+    text-align: right;
+    margin-right: 6px;
+}
+
+#login-form {
+    position: relative;
+    width: 500px;
+    margin: 100px auto 100px auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+button {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1em;
+    width: 470px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    border-radius: 50px;
+    margin-bottom: 2%;
+    outline: none;
+    background: transparent;
+    outline: none;
+    color: black;
+
+    border: solid 1px black;
+
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+    background: #f1f3f4;
+}
+
+
+#joinChat {
+    width: 500px;
+    padding: 0;
+    margin: 0;
+}
+
+button:hover {
+    background: #f1f3f4;
+}
