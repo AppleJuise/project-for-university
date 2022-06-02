@@ -154,9 +154,15 @@ ul {
     padding: 0;
 }
 
+#error-msg {
+    font-size: 1.3em;
+    color: #f1f3f4;
+    margin-bottom: 5px;
+}
+
 #message-block {
     float: right;
-    width: 20%;
+    width: 350px;
     margin-right: 3px;
 }
 
