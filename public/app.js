@@ -57,8 +57,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 author: data.author,
             })
             const songIndex = songsForPlaylist.length - 1
-            //console.log('object',)
-            //console.log('СЮДА СМОТРИ', songsForPlaylist.length - 1)
             item.innerHTML = `<div class="playlistSong" title="${songIndex} ${data.videoUrl}" ><div class="playlist-container"><div class="image-container"><img src="${data.thumbnail}" class="playlist-image"></img></div><div class="container-info"><div class="playlist-title">${data.title}</div><div class="playlist-author">${data.author}</div></div></div></div>`
             playlist.appendChild(item)
             playlist.scrollTop = playlist.scrollHeight
@@ -79,8 +77,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     author: element[1].author,
                 })
                 const songIndex = songsForPlaylist.length - 1
-                //console.log('object',)
-                //console.log('СЮДА СМОТРИ', songsForPlaylist.length - 1)
                 const item = document.createElement('li')
                 item.innerHTML = `<div class="playlistSong" title="${songIndex} ${element[1].videoUrl}" ><div class="playlist-container"><div class="image-container"><img src="${element[1].thumbnail}" class="playlist-image"></img></div><div class="container-info"><div class="playlist-title">${element[1].title}</div><div class="playlist-author">${element[1].author}</div></div></div></div>`
                 playlist.appendChild(item)
@@ -175,7 +171,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
         audio.play()
     })
 
-    audio.addEventListener('timeupdate', () => {
+    // audio.addEventListener('timeupdate', () => {
+    //     if (Math.abs(audio.currentTime - slider) > 0.5) {
+    //         //console.log('WOOPS')
+    //         socket.emit('slider time', { currentTime: audio.currentTime })
+    //     }
+    //     //console.log('audio.currentTime', audio.currentTime)
+    //     slider = audio.currentTime
+    // });
+
+
+    audio.addEventListener('seeked', () => {
         if (Math.abs(audio.currentTime - slider) > 0.5) {
             //console.log('WOOPS')
             socket.emit('slider time', { currentTime: audio.currentTime })
@@ -257,8 +263,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                             author: infoMusic.author,
                         })
                         const songIndex = songsForPlaylist.length - 1
-                        //console.log('object',)
-                        //console.log('СЮДА СМОТРИ', songsForPlaylist.length - 1)
 
                         const item = document.createElement('li')
                         item.innerHTML = `<div class="playlistSong" title="${songIndex} ${videoUrl}" ><div class="playlist-container"><div class="image-container"><img src="${thumbnail}" class="playlist-image"></img></div><div class="container-info"><div class="playlist-title">${infoMusic.title}</div><div class="playlist-author">${infoMusic.author}</div></div></div></div>`
