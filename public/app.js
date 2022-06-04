@@ -100,6 +100,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     socket.on('previous button1', function (data) {
         //console.log('previous button', data.currentSongIndex)
+        currentSongIndex = data.currentSongIndex
         getVideoInfo(songsForPlaylist[data.currentSongIndex].videoUrl)
     });
 
@@ -115,6 +116,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     socket.on('next button1', function (data) {
         //console.log('next button', data.currentSongIndex)
+        currentSongIndex = data.currentSongIndex
         getVideoInfo(songsForPlaylist[data.currentSongIndex].videoUrl)
     });
 
