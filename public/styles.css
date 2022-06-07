@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 
 
 input::-webkit-input-placeholder {
@@ -144,6 +143,7 @@ header {
     text-align: center;
     letter-spacing: 1px;
     color: black;
+    font-family: 'Comfortaa', cursive;
 }
 
 ul {
@@ -199,7 +199,7 @@ ul {
 
 .playlistSong {
     cursor: pointer;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Comfortaa', cursive;
     display: table;
     width: 100%;
     box-sizing: border-box;
@@ -211,7 +211,7 @@ ul {
 }
 
 .playlist-title {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Comfortaa', cursive;
     display: block;
     white-space: pre-wrap;
     font-size: 1em;
@@ -221,7 +221,7 @@ ul {
 }
 
 .playlist-author {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Comfortaa', cursive;
     margin-top: 4px;
     margin-left: 7px;
     display: block;
@@ -240,7 +240,7 @@ ul {
     height: 400px;
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Comfortaa', cursive;
     overflow-y: auto;
     overflow-x: hidden;
     white-space: pre-wrap;
@@ -253,6 +253,7 @@ ul {
 #messages li {
     font-size: 1.2em;
     margin-left: 7px;
+    font-family: 'Comfortaa', cursive;
 }
 
 #clients-numbers {
@@ -313,13 +314,14 @@ ul {
 }
 
 #video-info {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 
 #videoTitle {
     text-align: center;
     color: #f1f3f4;
     font-size: 2em;
+    margin-bottom: 2%;
 }
 
 audio {
@@ -373,7 +375,7 @@ li span {
 }
 
 .top {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 
 #play-area {
@@ -398,7 +400,7 @@ button {
 
 input,
 button {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Comfortaa', cursive;
     font-size: 1.1em;
     width: 470px;
     height: 50px;
