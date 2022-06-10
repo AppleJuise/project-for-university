@@ -173,17 +173,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         audio.play()
     })
 
-    // audio.addEventListener('timeupdate', () => {
-    //     if (Math.abs(audio.currentTime - slider) > 0.5) {
-    //         //console.log('WOOPS')
-    //         socket.emit('slider time', { currentTime: audio.currentTime })
-    //     }
-    //     //console.log('audio.currentTime', audio.currentTime)
-    //     slider = audio.currentTime
-    // });
-
-
-    audio.addEventListener('seeked', () => {
+    audio.addEventListener('timeupdate', () => {
         if (Math.abs(audio.currentTime - slider) > 0.5) {
             //console.log('WOOPS')
             socket.emit('slider time', { currentTime: audio.currentTime })
@@ -191,6 +181,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //console.log('audio.currentTime', audio.currentTime)
         slider = audio.currentTime
     });
+
+
+    // audio.addEventListener('seeked', () => {
+    //     if (Math.abs(audio.currentTime - slider) > 0.5) {
+    //         //console.log('WOOPS')
+    //         socket.emit('slider time', { currentTime: audio.currentTime })
+    //     }
+    //     //console.log('audio.currentTime', audio.currentTime)
+    //     slider = audio.currentTime
+    // });
 
     socket.on('message', function (message) {
         const item = document.createElement('li')
