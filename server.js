@@ -158,7 +158,7 @@ const getInfo = async (req, res) => {
 
     } catch (error) {
         console.log(`error --->`, error);
-        return res.status(500).json({ success: false, msg: "Failed to get video info" })
+        return res.json({ success: false, msg: "Failed to get video info" })
     }
 
 }
@@ -207,7 +207,7 @@ const getAudioStream = async (req, res) => {
 
     } catch (error) {
         console.log(error);
-        return res.status(500).send()
+        return res.send()
     }
 }
 
