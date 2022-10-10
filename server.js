@@ -10,6 +10,7 @@ let connectedUsers = {};
 
 const urlDB = 'mongodb+srv://qwerty:test123@cluster0.efuan.mongodb.net/?retryWrites=true&w=majority'
 
+
 app.use(express.static(__dirname + '/public'));
 
 io.on('connection', function (socket) {
